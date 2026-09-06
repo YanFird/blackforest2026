@@ -1,4 +1,4 @@
-const CACHE_NAME='blackforest-2026-v20260906-simple-offline';
+const CACHE_NAME='blackforest-2026-v20260907-waldshut';
 const OFFLINE_FILES=[
   "./",
   "./index.html",
