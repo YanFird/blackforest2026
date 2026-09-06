@@ -1,4 +1,4 @@
-const CACHE_NAME='blackforest-2026-v20260906';
+const CACHE_NAME='blackforest-2026-v20260906-train';
 const OFFLINE_FILES=[
   "./",
   "./index.html",
