@@ -49,6 +49,8 @@
     #days .section-head{margin-bottom:22px}
     #days .section-head h2{margin-top:0}
     .nav .links a{white-space:nowrap}
+    .nav .links a.nav-offline{background:var(--red);color:white;border-color:rgba(255,255,255,.35);box-shadow:0 10px 24px rgba(255,56,92,.24)}
+    .nav .links a.nav-offline:hover{background:#d22b49;color:white}
     @media(max-width:780px){
       main{background:linear-gradient(180deg,#fff8ea 0,#fffdf8 62%,#f6ead2 100%)}
       #days{padding-top:40px}
@@ -90,20 +92,17 @@
       .detail-box li+li{margin-top:6px}
     }
 
-    .btn.offline{background:rgba(255,255,255,.18);color:white;border:1px solid rgba(255,255,255,.38);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}.btn.offline:hover{background:white;color:var(--forest)}
-    .offline-zone{position:relative;overflow:hidden;border-radius:42px;background:radial-gradient(circle at 12% 8%,rgba(255,56,92,.14),transparent 30%),radial-gradient(circle at 94% 6%,rgba(255,240,184,.82),transparent 25%),linear-gradient(135deg,#fff,#fff8ea 55%,#e9f6ee);box-shadow:var(--shadow2);padding:34px;border:1px solid rgba(21,59,40,.12)}.offline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.offline-card{border-radius:30px;background:rgba(255,255,255,.92);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.05);padding:22px;display:flex;flex-direction:column;gap:12px;min-height:100%}.offline-card h3{margin:0;color:var(--forest);font-size:26px;letter-spacing:-.035em}.offline-card p{margin:0;color:var(--muted)}.offline-icon{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;background:#fff0f3;color:var(--red);font-size:28px;box-shadow:inset 0 0 0 1px rgba(255,56,92,.10)}.offline-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto}.offline-actions .planning-link,.offline-actions .map-link{margin-top:0}.offline-status{min-height:24px;margin-top:8px;color:var(--forest);font-weight:900}.offline-note{margin-top:18px;border-radius:24px;background:rgba(21,59,40,.08);border:1px solid rgba(21,59,40,.10);padding:15px 18px;color:#34443a;font-weight:800}.offline-note strong{color:var(--forest)}button.planning-link,button.map-link{border:0;font-family:inherit;cursor:pointer}.offline-primary{background:var(--red)!important;color:white!important}.offline-primary:hover{background:var(--forest)!important}
     body.print-all details > :not(summary){display:block!important}
-    @media(max-width:780px){.offline-grid{grid-template-columns:1fr}.offline-zone{border-radius:28px;padding:20px}.offline-card{border-radius:24px}.offline-actions{display:grid;grid-template-columns:1fr}.offline-actions .planning-link,.offline-actions .map-link{width:100%;align-self:stretch;text-align:center;justify-content:center}}
-    @media print{@page{size:A4;margin:10mm}.nav,.hide-print,.countdown-strip,.offline-actions,.fact-tabs,.fact-reroll,.game,.tap,.guide-open-indicator{display:none!important}body{background:white;color:#111;font-size:12px;line-height:1.45}.shell{width:100%;max-width:none}.hero{min-height:auto;color:#111;background:white}.hero:before,.hero:after{display:none}.hero-content{display:block;padding:8px 0 14px}.hero-card{display:none}.lead,.kicker{color:#111}.kicker{border:1px solid #ddd;background:white}.section{padding:18px 0;scroll-margin-top:0}.section h2{font-size:28px;letter-spacing:0}.section-head{display:block;margin-bottom:12px}.section-note{font-size:12px}.day,.planning-card,.kid-card,.guide-accordion,.offline-card{break-inside:avoid;page-break-inside:avoid;box-shadow:none;border:1px solid #ddd}.day summary{grid-template-columns:76px 1fr;gap:8px;padding:8px}.day-photo{display:none}.date{font-size:18px;border-radius:12px}.day-title h3{font-size:18px}.day-title p{font-size:12px}.day-details{display:block!important;padding:10px;border-top:1px solid #ddd}.detail-grid,.planning-grid,.kids-grid,.where-grid,.offline-grid,.guides-overview{display:block}.detail-box,.planning-card,.kid-card,.guide-info-card,.guide-mini-card,.offline-card{margin:0 0 8px;padding:10px;border-radius:12px}.planning-card img,.kid-card img,.guide-thumb,.facts-visual{display:none}.guides-zone,.kids-zone,.facts-section,.offline-zone{box-shadow:none;border:1px solid #ddd;border-radius:16px;padding:12px;background:white}.guide-accordion summary{grid-template-columns:1fr;padding:10px}.guide-body,details > :not(summary){display:block!important}.guide-actions,.card-actions{display:none!important}.facts-layout{display:block}.fact-list li{break-inside:avoid}a{color:#111;text-decoration:none}.offline-note{border:1px solid #ddd;background:white}}
+    @media print{@page{size:A4;margin:10mm}.nav,.hide-print,.countdown-strip,.fact-tabs,.fact-reroll,.game,.tap,.guide-open-indicator{display:none!important}body{background:white;color:#111;font-size:12px;line-height:1.45}.shell{width:100%;max-width:none}.hero{min-height:auto;color:#111;background:white}.hero:before,.hero:after{display:none}.hero-content{display:block;padding:8px 0 14px}.hero-card{display:none}.lead,.kicker{color:#111}.kicker{border:1px solid #ddd;background:white}.section{padding:18px 0;scroll-margin-top:0}.section h2{font-size:28px;letter-spacing:0}.section-head{display:block;margin-bottom:12px}.section-note{font-size:12px}.day,.planning-card,.kid-card,.guide-accordion{break-inside:avoid;page-break-inside:avoid;box-shadow:none;border:1px solid #ddd}.day summary{grid-template-columns:76px 1fr;gap:8px;padding:8px}.day-photo{display:none}.date{font-size:18px;border-radius:12px}.day-title h3{font-size:18px}.day-title p{font-size:12px}.day-details{display:block!important;padding:10px;border-top:1px solid #ddd}.detail-grid,.planning-grid,.kids-grid,.where-grid,.guides-overview{display:block}.detail-box,.planning-card,.kid-card,.guide-info-card,.guide-mini-card{margin:0 0 8px;padding:10px;border-radius:12px}.planning-card img,.kid-card img,.guide-thumb,.facts-visual{display:none}.guides-zone,.kids-zone,.facts-section{box-shadow:none;border:1px solid #ddd;border-radius:16px;padding:12px;background:white}.guide-accordion summary{grid-template-columns:1fr;padding:10px}.guide-body,details > :not(summary){display:block!important}.guide-actions,.card-actions{display:none!important}.facts-layout{display:block}.fact-list li{break-inside:avoid}a{color:#111;text-decoration:none}}
 
   </style>
 </head>
 <body>
-<nav class="nav hide-print"><div class="shell nav-inner"><div class="brand"><span class="mark">✦</span><span>היער השחור 2026</span></div><div class="links"><a href="#days">תוכנית יומית</a><a href="#attractions">אטרקציות</a><a href="#guides">מדריכי אטרקציות</a><a href="#lodging">לינה</a><a href="#shopping">קניות</a><a href="#kids">ילדים</a><a href="#offline">אופליין/PDF</a><a href="#facts">הידעת?</a></div></div></nav>
+<nav class="nav hide-print"><div class="shell nav-inner"><div class="brand"><span class="mark">✦</span><span>היער השחור 2026</span></div><div class="links"><a href="#days">תוכנית יומית</a><a href="#attractions">אטרקציות</a><a href="#guides">מדריכי אטרקציות</a><a href="#lodging">לינה</a><a href="#shopping">קניות</a><a href="#kids">ילדים</a><a class="nav-offline" href="blackforest-2026-offline.pdf" download>שמירה אופליין</a><a href="#facts">הידעת?</a></div></div></nav>
 <div id="countdown" class="countdown-strip hide-print"><div class="countdown-mini" id="countdown-panel"><span class="mini-main"><span class="mini-days"><strong>—</strong><span>ימים</span></span></span></div></div>
 <header class="hero">
   <div class="shell hero-content">
-    <div><div id="mobile-countdown" class="mobile-countdown-slot hide-print" aria-live="polite"></div><h1>היער השחור סוכות <span class="hero-year">2026</span></h1><span class="kicker"><span class="trip-label">טיול משפחתי · </span><span class="ltr">22.09–03.10.2026</span></span><div class="cta"><a class="btn red" href="#days">לפתוח את הימים</a><a class="btn primary" href="#attractions">אטרקציות</a><a class="btn offline" href="#offline">שמירה אופליין</a></div></div>
+    <div><div id="mobile-countdown" class="mobile-countdown-slot hide-print" aria-live="polite"></div><h1>היער השחור סוכות <span class="hero-year">2026</span></h1><span class="kicker"><span class="trip-label">טיול משפחתי · </span><span class="ltr">22.09–03.10.2026</span></span><div class="cta"><a class="btn red" href="#days">לפתוח את הימים</a><a class="btn primary" href="#attractions">אטרקציות</a></div></div>
     <aside class="hero-card"><div class="hero-grid"><div class="hero-shot"><img src="assets/tanneneck_hotel_sunny.jpg" alt="Landhotel Tanneneck"><b>Tanneneck</b></div><div class="hero-shot"><img src="assets/hotel_la_toscana_ringsheim.jpg" alt="Hotel La Toscana Ringsheim"><b>La Toscana</b></div></div><div class="hero-stats"><div class="stat"><strong>12</strong><span>ימי חופשה</span></div><div class="stat"><strong>2</strong><span>בסיסי לינה</span></div></div></aside>
   </div>
 </header>
@@ -723,43 +722,6 @@
   </div>
 </section>
 
-<section id="offline" class="section shell">
-  <div class="offline-zone">
-    <div class="section-head">
-      <div><div class="overline">בלי אינטרנט בטלפון</div><h2>שמירה אופליין / PDF</h2></div>
-      <p class="section-note">כדי שלא נהיה תלויים בקליטה בחו״ל: לשמור מראש PDF מלא בטלפון, ואפשר גם להכין את האתר לעבודה אופליין אחרי פתיחה אחת עם אינטרנט.</p>
-    </div>
-    <div class="offline-grid">
-      <article class="offline-card">
-        <span class="offline-icon">📄</span>
-        <h3>PDF מלא לטלפון</h3>
-        <p>האפשרות הכי בטוחה: קובץ אחד עם התוכנית היומית, הלינה, האטרקציות, המדריכים והטיפים. לפתוח פעם אחת ולשמור ב־Files / Downloads / WhatsApp.</p>
-        <div class="offline-actions">
-          <a class="planning-link offline-primary" href="blackforest-2026-offline.pdf" download>הורד PDF מלא</a>
-          <a class="map-link" href="blackforest-2026-offline.pdf" target="_blank" rel="noopener">פתח PDF</a>
-        </div>
-      </article>
-      <article class="offline-card">
-        <span class="offline-icon">🖨️</span>
-        <h3>ליצור PDF מעודכן מהעמוד</h3>
-        <p>אם האתר עודכן ורוצים גרסה חדשה במקום: הכפתור פותח את כל הימים והמדריכים ואז מפעיל הדפסה. בטלפון בוחרים Share / Print ואז Save as PDF.</p>
-        <div class="offline-actions">
-          <button id="print-trip" class="planning-link" type="button">פתח הכול ושמור כ־PDF</button>
-        </div>
-      </article>
-      <article class="offline-card">
-        <span class="offline-icon">📲</span>
-        <h3>להכין את האתר לאופליין</h3>
-        <p>אחרי שהדף נפתח פעם אחת עם אינטרנט, אפשר לשמור את הדף והתמונות במטמון הדפדפן. זה נוח, אבל ה־PDF עדיין הגיבוי הכי אמין.</p>
-        <div class="offline-actions">
-          <button id="offline-cache" class="planning-link" type="button">הכן אתר לאופליין</button>
-        </div>
-        <div id="offline-status" class="offline-status" aria-live="polite"></div>
-      </article>
-    </div>
-    <div class="offline-note"><strong>טיפ לפני הטיסה:</strong> לפתוח את ה־PDF בטלפון בבית, לשלוח לעצמך/לקבוצה ב־WhatsApp, וגם לשמור ב־Files/Downloads. כך הוא נפתח גם בלי קליטה או Wi‑Fi.</div>
-  </div>
-</section>
 </main><footer><div class="shell"><div><strong>חופשת היער השחור ואלזס 2026</strong><br>ברושור משפחתי ויזואלי · עודכן 06.09.2026</div><div><span>ברושור משפחתי של Talos</span><br><small>עודכן יום אלזס: Colmar → Kaysersberg → פארק הקופים</small></div></div></footer>
 <script>
   document.querySelectorAll('.day').forEach(day=>{day.addEventListener('toggle',()=>{const label=day.querySelector('.tap span'); if(label) label.innerHTML=(day.open?'סגירת פרטים':'פתח פרטים')+' <b class="chev">⌄</b>';});});
@@ -885,99 +847,10 @@
     update();
     window.addEventListener('scroll',update,{passive:true});
   }
-  const talosOfflineFiles=[
-    "./",
-    "./index.html",
-    "./manifest.webmanifest",
-    "./sw.js",
-    "./blackforest-2026-offline.pdf",
-    "./assets/badeparadies.jpg",
-    "./assets/colmar.jpg",
-    "./assets/colmar_shopping.jpg",
-    "./assets/europa_park.jpg",
-    "./assets/europa_park_new.jpg",
-    "./assets/fashion_food_festival_header.jpg",
-    "./assets/fashion_food_festival_konviktstrasse.jpg",
-    "./assets/feldberg.jpg",
-    "./assets/freiburg_festival_parking.jpg",
-    "./assets/freiburg_kajo_festival_shopping.jpg",
-    "./assets/freiburg_muenster.jpg",
-    "./assets/fundorena_indoor_high_ropes.jpg",
-    "./assets/gutach_coaster.jpg",
-    "./assets/hasenhorn.jpg",
-    "./assets/hero_black_forest.jpg",
-    "./assets/hirschgrund_zipline.jpg",
-    "./assets/hofgut.jpg",
-    "./assets/hotel_la_toscana_ringsheim.jpg",
-    "./assets/kaysersberg.jpg",
-    "./assets/loeffingen_hero.jpg",
-    "./assets/monkey_mountain.jpg",
-    "./assets/rhine_falls.jpg",
-    "./assets/riquewihr.jpg",
-    "./assets/roppenheim_outlet.jpg",
-    "./assets/rulantica_new.jpg",
-    "./assets/steinwasen_park_official.jpg",
-    "./assets/strasbourg.jpg",
-    "./assets/strasbourg_kehl_tram_shopping_map_2026-08-15_static.png",
-    "./assets/strasbourg_shopping.jpg",
-    "./assets/tanneneck_hotel.jpg",
-    "./assets/tanneneck_hotel_sunny.jpg",
-    "./assets/titisee.jpg",
-    "./assets/titisee_candidate_1.jpg",
-    "./assets/titisee_candidate_5.jpg",
-    "./assets/titisee_recovery.jpg",
-    "./assets/titisee_schweizer_boat_cruise.jpg",
-    "./assets/todtnau_blackforestline.jpg",
-    "./assets/triberg_waterfalls.jpg",
-    "./assets/vogelpark_steinen.jpg",
-    "./assets/vogtsbauernhof.jpg",
-    "./assets/zurich_airport.jpg",
-    "./assets/zurich_lake_quaibruecke.jpg"
-];
-  const talosOfflineCacheName='blackforest-2026-v20260906-gaspedal';
   function talosOpenAllDetailsForPrint(){
     document.body.classList.add('print-all');
     document.querySelectorAll('details').forEach(details=>{details.open=true;});
     document.querySelectorAll('.day .tap span').forEach(label=>{label.innerHTML='סגירת פרטים <b class="chev">⌄</b>';});
-  }
-  function talosSetOfflineStatus(message,ok=true){
-    const status=document.getElementById('offline-status');
-    if(!status) return;
-    status.textContent=message;
-    status.style.color=ok?'var(--forest)':'#9f2740';
-  }
-  function talosPrintFullTrip(){
-    talosOpenAllDetailsForPrint();
-    talosSetOfflineStatus('פתחתי את כל הימים והמדריכים. במסך ההדפסה לבחור Save as PDF / שמירה לקבצים.');
-    setTimeout(()=>window.print(),180);
-  }
-  async function talosPrepareOffline(){
-    if(!('caches' in window)){
-      talosSetOfflineStatus('הדפדפן הזה לא תומך בשמירת אתר אופליין. להשתמש בכפתור ה־PDF.',false);
-      return;
-    }
-    talosSetOfflineStatus('שומר את האתר והתמונות לאופליין…');
-    try{
-      if('serviceWorker' in navigator && location.protocol.startsWith('http')){
-        await navigator.serviceWorker.register('./sw.js');
-      }
-      const cache=await caches.open(talosOfflineCacheName);
-      const urls=talosOfflineFiles.map(file=>new URL(file,location.href).toString());
-      const results=await Promise.allSettled(urls.map(async url=>{
-        const response=await fetch(url,{cache:'reload'});
-        if(!response.ok) throw new Error(url+' '+response.status);
-        await cache.put(url,response.clone());
-      }));
-      const failed=results.filter(result=>result.status==='rejected').length;
-      if(failed){
-        talosSetOfflineStatus('רוב הקבצים נשמרו, אבל '+failed+' קבצים לא נטענו. ה־PDF עדיין מומלץ כגיבוי.',false);
-      }else{
-        talosSetOfflineStatus('מוכן: האתר והתמונות נשמרו בדפדפן. עדיין כדאי לשמור גם את ה־PDF.');
-      }
-    }catch(error){
-      talosSetOfflineStatus('לא הצלחתי להכין אתר אופליין בדפדפן הזה. להשתמש בהורדת ה־PDF.',false);
-      console.warn('Offline preparation failed',error);
-    }
   }
   window.addEventListener('beforeprint',talosOpenAllDetailsForPrint);
   if(new URLSearchParams(window.location.search).has('print') || new URLSearchParams(window.location.search).has('pdf')){
@@ -986,8 +859,6 @@
   if('serviceWorker' in navigator && location.protocol.startsWith('http')){
     navigator.serviceWorker.register('./sw.js').catch(error=>console.warn('Service worker registration failed',error));
   }
-  document.getElementById('print-trip')?.addEventListener('click',talosPrintFullTrip);
-  document.getElementById('offline-cache')?.addEventListener('click',talosPrepareOffline);
 
   scheduleCountdownRefresh();
   initCountdownScrollHide();
