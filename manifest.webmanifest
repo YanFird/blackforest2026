@@ -1,0 +1,12 @@
+{
+  "name": "חופשת היער השחור ואלזס 2026",
+  "short_name": "Black Forest 2026",
+  "description": "ברושור משפחתי אופליין לטיול היער השחור ואלזס 2026",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#153b28",
+  "dir": "rtl",
+  "lang": "he"
+}
