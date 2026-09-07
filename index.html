@@ -1038,7 +1038,16 @@
     const id=decodeURIComponent((window.location.hash||'').slice(1));
     const target=id && document.getElementById(id);
     prioritizeTargetImages(target);
-    if(target && target.classList.contains('guide-accordion')) openGuideAccordion(target,{scroll:true,behavior});
+    if(!target) return;
+    if(target.classList.contains('guide-accordion')){
+      openGuideAccordion(target,{scroll:true,behavior});
+      return;
+    }
+    if(target.classList.contains('day')) target.open=true;
+    const run=()=>scrollGuideIntoView(target,'auto');
+    requestAnimationFrame(()=>requestAnimationFrame(run));
+    setTimeout(run,180);
+    setTimeout(run,650);
   }
   document.querySelectorAll('a[href^="#guide-"]').forEach(link=>{
     link.addEventListener('click',event=>{

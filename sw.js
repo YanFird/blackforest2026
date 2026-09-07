@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20260907-freiburg-parking';
+const CACHE_NAME = 'blackforest-2026-v20260907-anchor-fix';
 const CORE_ASSETS = [
   './',
   './index.html',
