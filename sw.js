@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20260907-anchor-fix';
+const CACHE_NAME = 'blackforest-2026-v20260907-facts-trip-alignment';
 const CORE_ASSETS = [
   './',
   './index.html',
