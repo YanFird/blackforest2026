@@ -713,7 +713,7 @@
   </div>
 </section>
 
-</main><dialog id="nav-app-dialog" class="nav-app-dialog" dir="rtl" aria-labelledby="nav-app-title" aria-describedby="nav-app-destination nav-app-note"><form method="dialog" class="nav-app-sheet"><button class="nav-app-close" value="cancel" aria-label="סגירת חלון בחירת אפליקציית ניווט">×</button><div class="nav-app-heading"><span class="nav-app-heading-icon" aria-hidden="true">🚗</span><h2 id="nav-app-title">באיזו אפליקציה לנווט?</h2></div><p id="nav-app-destination" class="nav-app-destination"></p><p id="nav-app-note" class="nav-app-note">אותו יעד בשתי האפליקציות. Waze ינווט מהמיקום הנוכחי.</p><div class="nav-app-options"><a id="google-nav-option" class="nav-app-option google" target="_blank" rel="noopener"><span class="nav-app-logo google-logo" aria-hidden="true">G</span><span>Google Maps</span></a><a id="waze-nav-option" class="nav-app-option waze" target="_blank" rel="noopener"><span class="nav-app-logo waze-logo" aria-hidden="true">W</span><span>Waze</span></a></div><button class="nav-app-cancel" value="cancel">ביטול</button></form></dialog><footer><div class="shell"><div><strong>חופשת היער השחור ואלזס 2026</strong><br>ברושור משפחתי ויזואלי · עודכן 07.09.2026</div><div><span>טיול משפחתי · היער השחור ואלזס</span><br><small>עודכן יום ההגעה: Waldshut‑Tiengen / Kaiserstraße</small></div></div></footer>
+</main><dialog id="nav-app-dialog" class="nav-app-dialog" dir="rtl" aria-labelledby="nav-app-title" aria-describedby="nav-app-destination nav-app-note"><form method="dialog" class="nav-app-sheet"><button class="nav-app-close" value="cancel" aria-label="סגירת חלון בחירת אפליקציית ניווט">×</button><div class="nav-app-heading"><span class="nav-app-heading-icon" aria-hidden="true">🚗</span><h2 id="nav-app-title">באיזו אפליקציה לנווט?</h2></div><p id="nav-app-destination" class="nav-app-destination"></p><p id="nav-app-note" class="nav-app-note">אותו יעד בשתי האפליקציות. ב־Waze לחצו „סע” כדי להתחיל בניווט.</p><div class="nav-app-options"><a id="google-nav-option" class="nav-app-option google" target="_blank" rel="noopener"><span class="nav-app-logo google-logo" aria-hidden="true">G</span><span>Google Maps</span></a><a id="waze-nav-option" class="nav-app-option waze" target="_blank" rel="noopener"><span class="nav-app-logo waze-logo" aria-hidden="true">W</span><span>Waze</span></a></div><button class="nav-app-cancel" value="cancel">ביטול</button></form></dialog><footer><div class="shell"><div><strong>חופשת היער השחור ואלזס 2026</strong><br>ברושור משפחתי ויזואלי · עודכן 07.09.2026</div><div><span>טיול משפחתי · היער השחור ואלזס</span><br><small>עודכן יום ההגעה: Waldshut‑Tiengen / Kaiserstraße</small></div></div></footer>
 <script>
   document.querySelectorAll('.day').forEach(day=>{day.addEventListener('toggle',()=>{const label=day.querySelector('.tap span'); if(label) label.innerHTML=(day.open?'סגירת פרטים':'פתח פרטים')+' <b class="chev">⌄</b>';});});
 
@@ -1106,7 +1106,6 @@
       const coordinates=destination.match(/^(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)$/);
       if(coordinates) url.searchParams.set('ll',coordinates[1]+','+coordinates[2]);
       else url.searchParams.set('q',destination);
-      url.searchParams.set('navigate','yes');
       url.searchParams.set('utm_source','blackforest_family_trip');
       return url.href;
     }
