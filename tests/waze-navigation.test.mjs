@@ -6,6 +6,20 @@ const functionMatch = html.match(/function buildWazeUrl\(destination\)\{([\s\S]*
 assert.ok(functionMatch, 'buildWazeUrl must exist in index.html');
 
 const buildWazeUrl = new Function('destination', functionMatch[1]);
+const anchorMatches = [...html.matchAll(/<a\b[^>]*class="[^"]*nav-link[^"]*"[^>]*href="([^"]+)"/g)];
+assert.ok(anchorMatches.length > 0, 'site should have driving nav-link anchors');
+for (const match of anchorMatches) {
+  const href = match[1].replaceAll('&amp;', '&');
+  const url = new URL(href);
+  assert.equal(url.searchParams.get('travelmode'), 'driving',
+    `nav-link should only be used for driving links, got ${href}`);
+}
+
+const day1 = html.match(/id="day-2026-09-22"[\s\S]*?id="day-2026-09-23"/)[0];
+assert.match(day1, /origin=Parkhaus\+Kornhaus%2C\+Poststra%C3%9Fe\+2%2C\+79761\+Waldshut-Tiengen%2C\+Germany[^>]*travelmode=walking/,
+  'Day 1 must include Google walking route from primary Parkhaus Kornhaus to Kaiserstraße');
+assert.match(day1, /origin=Kornhausplatz\+Nord%2C\+Bismarckstra%C3%9Fe\+14%2C\+79761\+Waldshut-Tiengen%2C\+Germany[^>]*travelmode=walking/,
+  'Day 1 must include Google walking route from fallback Kornhausplatz Nord to Kaiserstraße');
 
 const address = 'Parkhaus Kornhaus, Poststraße 2, Waldshut-Tiengen, Germany';
 const addressUrl = new URL(buildWazeUrl(address));

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20260908-freiburg-market-transfer';
+const CACHE_NAME = 'blackforest-2026-v20260918-waldshut-navigation';
 const CORE_ASSETS = [
   './',
   './index.html',
