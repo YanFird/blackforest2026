@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20260918-waldshut-navigation';
+const CACHE_NAME = 'blackforest-2026-v20260919-privacy-booking-refs';
 const CORE_ASSETS = [
   './',
   './index.html',
