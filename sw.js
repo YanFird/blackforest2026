@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20260919-strasbourg-tram-payment';
+const CACHE_NAME = 'blackforest-2026-v20260919-titisee-badestelle';
 const CORE_ASSETS = [
   './',
   './index.html',
