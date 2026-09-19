@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20260919-privacy-booking-refs';
+const CACHE_NAME = 'blackforest-2026-v20260919-strasbourg-tram-route';
 const CORE_ASSETS = [
   './',
   './index.html',
