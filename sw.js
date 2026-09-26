@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20260926-freiburg-festival-nav';
+const CACHE_NAME = 'blackforest-2026-v20260926-freiburg-festival-nav-order';
 const CORE_ASSETS = [
   './',
   './index.html',
