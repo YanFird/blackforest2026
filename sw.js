@@ -1,4 +1,4 @@
-const CACHE_NAME = 'blackforest-2026-v20261002-germany-fuel-route';
+const CACHE_NAME = 'blackforest-2026-v20261002-simple-fuel-dropoff-route';
 const CORE_ASSETS = [
   './',
   './index.html',
